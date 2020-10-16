@@ -1,0 +1,28 @@
+.works{
+    background: #111430;
+}
+.carousel-inner div{
+    margin: 0px 5px;
+}
+.react-multiple-carousel__arrow{
+    display: none;
+}
+.react-multi-carousel-dot button{
+    width: 16px !important;
+    height: 16px !important;
+    margin: 0 10px;
+    border-color: transparent !important;
+}
+.react-multi-carousel-dot--active button {
+    border-color: #FBD062 !important;
+    background: #fff !important;
+}
+.react-multi-carousel-list {
+    padding: 50px 0px;
+}
+.carousel-item-padding-40-px {
+    padding: 20px;
+}
+.carousel-item-padding-40-px img{
+    border-radius: 10px;
+}

@@ -1,0 +1,23 @@
+.btn-fill{
+    background: #111430;
+    border: 0px;
+    border-radius: 5px;
+    color: white !important;
+    padding: 12px 50px !important;
+    font-weight: 500;
+}
+.navbar-nav a{
+    color: #474747;
+    padding: 10px 20px !important;
+}
+.fixed-top{
+    background: #FBD062;
+}
+.users{
+    font-weight: bold;
+    color: #111430;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(0,0,0,1);
+    font-weight: 400;
+}
