@@ -28,6 +28,17 @@
   color: #61dafb;
 }
 
+.section-separator {
+  padding: 40px 0;
+}
+
+.btn-primary.btn-fill:hover {
+  color: #fff;
+  background-color: #7ab259;
+  border-color: #7ab259;
+
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

@@ -22,8 +22,13 @@ lib-cov
 coverage
 *.lcov
 
+
 # nyc test coverage
 .nyc_output
+.firebase
+.firebaserc 
+.gitignore
+.firebase
 
 # Grunt intermediate storage (https://gruntjs.com/creating-plugins#storing-task-files)
 .grunt
@@ -121,6 +126,7 @@ dist
 .env.development.local
 .env.test.local
 .env.production.local
+
 
 npm-debug.log*
 yarn-debug.log*

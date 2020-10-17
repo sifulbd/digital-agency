@@ -1,10 +1,10 @@
 import React from 'react';
 
-const ServiceDataTable = ({allOrders}) => {
+const AllData = ({allOrders}) => {
 
     const handleStatusChange = (e, id) => {
         const status = e.target.value;
-        fetch("http://localhost:7000/update/"+id, {
+        fetch("https://pacific-bayou-95420.herokuapp.com/update/"+id, {
             method: "PATCH",
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({status})
@@ -18,10 +18,11 @@ const ServiceDataTable = ({allOrders}) => {
     }
 
     return (
-        <table className="table table-borderless">
+        <table className="table">
             <thead>
                 <tr>
-                    <th className="text-secondary" scope="col">Name</th>
+                    <th className="text-secondary" scope="col">No</th>
+                    <th className="text-secondary" scope="col">User Name</th>
                     <th className="text-secondary" scope="col">Email ID</th>
                     <th className="text-secondary" scope="col">Service</th>
                     <th className="text-secondary" scope="col">Project Details</th>
@@ -30,8 +31,9 @@ const ServiceDataTable = ({allOrders}) => {
             </thead>
             <tbody>
                 {
-                  allOrders.map(order => 
-                    <tr>
+                  allOrders.map((order, index)=> 
+                    <tr key={index}>
+                        <td>{index + 1}</td>
                         <td>{order.name}</td>
                         <td>{order.email}</td>
                         <td>{order.projectName}</td>
@@ -52,4 +54,4 @@ const ServiceDataTable = ({allOrders}) => {
     );
 };
 
-export default ServiceDataTable;
+export default AllData;

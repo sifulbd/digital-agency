@@ -27,7 +27,7 @@ const AddService = () => {
         formData.append('title', info.title);
         formData.append('description', info.description);
 
-        fetch('http://localhost:7000/addservice', {
+        fetch('https://pacific-bayou-95420.herokuapp.com/addservice', {
             method: 'POST',
             body: formData
         })
@@ -41,7 +41,7 @@ const AddService = () => {
     }
 
     return (
-        <section className="order-wrapper hidden">
+        <section className="order hidden">
             <div className="container-fluid">
                 <div className="row">
                     <div className="col-md-12 px-0">

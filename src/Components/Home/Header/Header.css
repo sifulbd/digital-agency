@@ -1,7 +1,7 @@
 .home-section-separator {
     padding: 120px 0;
 }
-.home-wrapper{
+.home{
     height: 100vh;
     background: #FBD062;
     clip-path: polygon(0 0, 100% 0, 100% 83%, 0% 100%);
@@ -26,7 +26,7 @@
 }
 
 @media (max-width: 991px) {
-    .home-wrapper {
+    .home {
         height: 100%;
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
         padding-bottom: 60px;

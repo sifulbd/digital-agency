@@ -13,7 +13,7 @@ const Orders = () => {
     const [service, setService] = useState({});
 
     useEffect(() => {
-        fetch("http://localhost:7000/orders/"+ id)
+        fetch("https://pacific-bayou-95420.herokuapp.com/allorders/" + id)
         .then(res => res.json())
         .then(data => {
             setService(data);
@@ -24,12 +24,13 @@ const Orders = () => {
     const { register, handleSubmit, errors } = useForm();
     const history = useHistory();
 
-    const onSubmit = userData => {
+    const onSubmit = Data => {
         const status = "pending"
         const {img} = {...service}
-        const orderDetail = {img , ...userData, status};
+        console.log(service)
+        const orderDetail = {img , ...Data, status};
 
-        fetch("http://localhost:7000/addOrder", { 
+        fetch("https://pacific-bayou-95420.herokuapp.com/addOrder", { 
             method: "POST",
             headers: {
               'Content-Type': 'application/json'
@@ -45,7 +46,7 @@ const Orders = () => {
     }
 
     return (
-        <section className="order-wrapper hidden">
+        <section className="order hidden">
            <div className="container-fluid">
                <div className="row">
                    <div className="col-md-12 px-0">

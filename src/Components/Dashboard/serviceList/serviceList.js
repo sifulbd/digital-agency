@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { UserContext } from '../../../App';
 import Sidebar from '../Sidebar/Sidebar';
 import './ServiceList.css'
-import SingleServiceList from './SingleServiceList';
+import List from './List';
 
 const ServiceList = () => {
 
@@ -10,7 +10,7 @@ const ServiceList = () => {
     const [orders, setOrders] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:7000/serviceList?email=${loggedInUser.email}`)
+        fetch(`https://pacific-bayou-95420.herokuapp.com/serviceList?email=${loggedInUser.email}`)
         .then(res => res.json())
         .then(data => {
             setOrders(data)
@@ -18,7 +18,7 @@ const ServiceList = () => {
     }, []);
 
     return (
-        <section className="order-wrapper hidden">
+        <section className="order hidden">
            <div className="container-fluid">
                <div className="row">
                    <div className="col-md-12 px-0">
@@ -36,7 +36,7 @@ const ServiceList = () => {
                                                <div className="service-list">
                                                    <div className="row">
                                                        {
-                                                           orders.map(order => <SingleServiceList order={order} key={order._id}></SingleServiceList>)
+                                                           orders.map(order => <List order={order} key={order._id}></List>)
                                                        }
                                                    </div>
                                                </div>

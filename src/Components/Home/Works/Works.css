@@ -12,10 +12,11 @@
     height: 16px !important;
     margin: 0 10px;
     border-color: transparent !important;
+    background: #242A65 !important;
 }
 .react-multi-carousel-dot--active button {
     border-color: #FBD062 !important;
-    background: #fff !important;
+    background: #FBD062 !important;
 }
 .react-multi-carousel-list {
     padding: 50px 0px;

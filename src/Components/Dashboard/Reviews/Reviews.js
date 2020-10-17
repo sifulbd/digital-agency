@@ -11,7 +11,7 @@ const Reviews = () => {
     const onSubmit = userData => {
         const img = loggedInUser.img;
         const reviewDetail = {img , ...userData};
-        fetch("http://localhost:7000/addReview", { 
+        fetch("https://pacific-bayou-95420.herokuapp.com/addReview", { 
             method: "POST",
             headers: {
               'Content-Type': 'application/json'
@@ -27,7 +27,7 @@ const Reviews = () => {
     }
     
     return (
-        <section className="order-wrapper hidden">
+        <section className="order hidden">
            <div className="container-fluid">
                <div className="row">
                    <div className="col-md-12 px-0">
@@ -36,7 +36,7 @@ const Reviews = () => {
                            <div className="col-md-9 pl-0">
                                <div className="order-details">
                                    <ul className="list-unstyled d-flex justify-content-between">
-                                       <li>Order</li>
+                                       <li>Reviews</li>
                                        <li>{loggedInUser.name}</li>
                                    </ul>
                                    <div className="order-form">

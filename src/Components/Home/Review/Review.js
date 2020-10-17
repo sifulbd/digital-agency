@@ -8,7 +8,7 @@ const Review = () => {
 
     const [review, setReview] = useState([]);
     useEffect(() => {
-        fetch("http://localhost:7000/reviews")
+        fetch("https://pacific-bayou-95420.herokuapp.com/allReviews")
         .then(res => res.json())
         .then(data => {
             setReview(data)
@@ -16,9 +16,9 @@ const Review = () => {
     }, [])
 
     return (
-        <section className="review-wrapper section-padding pt-0" id="review">
+        <section className="review section-padding pt-0" id="review">
             <div className="container">
-                <div className="row">
+                <div className="row section-separator">
                     <div className="col-md-12">
                         <h1 className="title">Clients <span>Feedback</span></h1>
                     </div>

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import SingleService from './SingleService';
+import Service from './Service';
 import './Services.css'
 import { useState } from 'react';
 
@@ -7,16 +7,15 @@ import { useState } from 'react';
 const Services = () => {
     const [services , setServices] = useState([]);
     useEffect(() => {
-        fetch("http://localhost:7000/services")
+        fetch("https://pacific-bayou-95420.herokuapp.com/services")
         .then(res => res.json())
         .then(data => {
             setServices(data);
-            console.log(data)
         })
     }, [])
 
     return (
-        <section className="services-wrapper">
+        <section className="services">
             <div className="container">
                 <div className="row">
                     <div className="col-md-12 px-0">
@@ -24,7 +23,7 @@ const Services = () => {
                         <div className="service-inner">
                             <div className="row">
                                 {
-                                    services.map(service => <SingleService service={service} key={service._id}></SingleService>)
+                                    services.map(service => <Service service={service} key={service._id}></Service>)
                                 }
                             </div>
                         </div>

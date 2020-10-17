@@ -5,7 +5,7 @@ import {useSpring, animated} from 'react-spring'
 
 const Header = () => {
     return (
-        <section className="home-wrapper">
+        <section className="home">
             <div className="container">
                 <div className="row home-section-separator">
                     <div className="col-md-12 px-0">

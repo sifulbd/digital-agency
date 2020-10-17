@@ -19,9 +19,15 @@
     border-radius: 30px;
     cursor: pointer;
     font-weight: 500;
+    position: relative;
 }
 .login-opt img {
     margin-right: 100px;
+    float: left;
+    position: absolute;
+    left: 8px;
+    top: 6px;
+    bottom: 0;
 }
 .register-inner h6 span{
     color: #3F90FC;

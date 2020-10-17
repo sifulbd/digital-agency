@@ -5,7 +5,7 @@ const SingleServiceList = ({order}) => {
         <div className="col-md-6">
             <div className="list-inner">
                 <div className="d-flex justify-content-between">
-                    <img src={`http://localhost:7000/${order.img}`} alt="" className="img-fluid"/>
+                    <img src={`https://pacific-bayou-95420.herokuapp.com/${order.img}`} alt="" className="img-fluid"/>
                     <div className="status">
                         <strong>{order.status}</strong>
                     </div>

@@ -38,7 +38,7 @@ const Login = () => {
     }
 
     return (
-        <div className="register-wrapper">
+        <div className="register">
             <div className="container">
                 <div className="row">
                     <div className="col-md-12">

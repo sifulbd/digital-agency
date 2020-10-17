@@ -14,8 +14,7 @@ const MakeAdmin = () => {
     }
 
     const handleSubmit = (e) => {
-        e.preventDefault();
-        fetch("http://localhost:7000/makeAdmin", { 
+        fetch("https://pacific-bayou-95420.herokuapp.com/newAdmin", { 
             method: "POST",
             headers: {
               'Content-Type': 'application/json'
@@ -28,10 +27,11 @@ const MakeAdmin = () => {
                 alert("Admin Added Successfully!!!!!")
             }
         })
+        e.preventDefault();
     }
 
     return (
-        <section className="order-wrapper hidden">
+        <section className="order hidden">
            <div className="container-fluid">
                <div className="row">
                    <div className="col-md-12 px-0">
@@ -40,7 +40,7 @@ const MakeAdmin = () => {
                            <div className="col-md-9 pl-0">
                                <div className="order-details">
                                    <ul className="list-unstyled d-flex justify-content-between">
-                                       <li>Services list</li>
+                                       <li>Make Admin using gmail</li>
                                        <li>{loggedInUser.name}</li>
                                    </ul>
                                    <div className="order-form">
